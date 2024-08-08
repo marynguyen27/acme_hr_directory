@@ -90,12 +90,12 @@ const init = async () => {
       INSERT INTO employees(name, department_id) VALUES('Apple Appleton', 1), ('Blue Berry', 2), ('Grape Fruit', 3);
     `;
     await client.query(SQL);
-    console.log('Database tables created and seeded.');
+    console.log('Success database tables created and seeded');
 
     app.listen(port, () => console.log(`Server listening on port ${port}`));
   } catch (error) {
     console.error(
-      'Error initializing the database or starting the server:',
+      'There was an error initializing the database or starting the server',
       error
     );
   }
